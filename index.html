@@ -1,0 +1,696 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aleksandro Rodrigues | Analista de Sistemas</title>
+
+    <meta name="description" content="Portfólio profissional de Aleksandro Rodrigues - Analista de Sistemas, SQL Server e TOTVS RM.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080b12;
+            color: #e8edf5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* MENU */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 11, 18, 0.90);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1c2433;
+        }
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #4f8cff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #aeb8c8;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4f8cff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #245cff;
+            opacity: 0.12;
+            filter: blur(120px);
+            border-radius: 50%;
+            top: 10%;
+            right: 5%;
+        }
+
+        .hero-content {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            padding: 120px 20px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-small {
+            color: #4f8cff;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #4f8cff;
+        }
+
+        .hero h2 {
+            font-size: clamp(22px, 4vw, 34px);
+            color: #aeb8c8;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #8f9bad;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #4f8cff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #326fe0;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #303b4f;
+            color: #d5dce7;
+        }
+
+        .btn-secondary:hover {
+            border-color: #4f8cff;
+            color: #4f8cff;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: #4f8cff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: #8f9bad;
+            margin-top: 10px;
+        }
+
+        /* SOBRE */
+
+        .about {
+            background: #0c1018;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about-text p {
+            color: #aeb8c8;
+            margin-bottom: 20px;
+        }
+
+        .info-card {
+            background: #111722;
+            border: 1px solid #202a3b;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 20px;
+        }
+
+        .info-card div {
+            padding: 12px 0;
+            border-bottom: 1px solid #202a3b;
+            color: #9da8b9;
+        }
+
+        .info-card div:last-child {
+            border-bottom: none;
+        }
+
+        /* HABILIDADES */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill {
+            background: #111722;
+            border: 1px solid #202a3b;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #4f8cff;
+        }
+
+        .skill h3 {
+            margin-bottom: 8px;
+        }
+
+        .skill p {
+            color: #8f9bad;
+            font-size: 14px;
+        }
+
+        /* PROJETOS */
+
+        .projects {
+            background: #0c1018;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project {
+            background: #111722;
+            border: 1px solid #202a3b;
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+            border-color: #4f8cff;
+        }
+
+        .project-icon {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #8f9bad;
+            font-size: 15px;
+        }
+
+        /* CONTATO */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #8f9bad;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #1c2433;
+            text-align: center;
+            padding: 30px 20px;
+            color: #667185;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            AR<span>.</span>
+        </div>
+
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- INÍCIO -->
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+
+            <div class="hero-small">
+                Olá, eu sou
+            </div>
+
+            <h1>
+                Aleksandro<br>
+                <span>Rodrigues.</span>
+            </h1>
+
+            <h2>
+                Analista de Sistemas
+            </h2>
+
+            <p>
+                Profissional de tecnologia com experiência em sistemas,
+                bancos de dados, processos e soluções para gestão acadêmica.
+            </p>
+
+            <div class="buttons">
+                <a href="#projetos" class="btn btn-primary">
+                    Conheça meu trabalho
+                </a>
+
+                <a href="#contato" class="btn btn-secondary">
+                    Entre em contato
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="about" id="sobre">
+
+        <div class="container">
+
+            <div class="section-title">
+                <small>Sobre mim</small>
+                <h2>Experiência & Tecnologia</h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        Sou profissional da área de tecnologia com atuação
+                        em análise de sistemas, banco de dados e suporte
+                        a processos de negócio.
+                    </p>
+
+                    <p>
+                        Tenho experiência com ambientes corporativos,
+                        especialmente em soluções envolvendo TOTVS RM,
+                        SQL Server, integrações e tratamento de dados.
+                    </p>
+
+                    <p>
+                        Meu foco é utilizar tecnologia para melhorar
+                        processos, facilitar a análise das informações
+                        e criar soluções mais eficientes.
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <h3>Áreas de atuação</h3>
+
+                    <div>🗄️ Banco de Dados</div>
+                    <div>💻 Análise de Sistemas</div>
+                    <div>⚙️ TOTVS RM</div>
+                    <div>🔗 Integrações</div>
+                    <div>📊 Dados e Relatórios</div>
+                    <div>🚀 Automação de Processos</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HABILIDADES -->
+
+    <section id="habilidades">
+
+        <div class="container">
+
+            <div class="section-title">
+                <small>Conhecimentos</small>
+                <h2>Minhas habilidades</h2>
+                <p>
+                    Algumas das principais tecnologias e áreas
+                    com as quais trabalho.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill">
+                    <h3>SQL Server</h3>
+                    <p>
+                        Consultas, joins, filtros, subqueries,
+                        tratamento e análise de dados.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>TOTVS RM</h3>
+                    <p>
+                        Administração, consultas, processos,
+                        parametrizações e suporte.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Integrações</h3>
+                    <p>
+                        Integração entre sistemas e tratamento
+                        de informações.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Dados</h3>
+                    <p>
+                        Extração, organização, análise e
+                        geração de informações.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>HTML & CSS</h3>
+                    <p>
+                        Desenvolvimento de páginas web
+                        modernas e responsivas.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <p>
+                        Desenvolvimento de funcionalidades
+                        e interações para aplicações web.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Git & GitHub</h3>
+                    <p>
+                        Versionamento e publicação
+                        de projetos.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Processos</h3>
+                    <p>
+                        Análise e melhoria de processos
+                        utilizando tecnologia.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJETOS -->
+
+    <section class="projects" id="projetos">
+
+        <div class="container">
+
+            <div class="section-title">
+                <small>Portfólio</small>
+                <h2>Projetos</h2>
+                <p>
+                    Alguns exemplos de soluções e projetos
+                    que podemos apresentar neste portfólio.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project">
+
+                    <div class="project-icon">🗄️</div>
+
+                    <h3>Projetos SQL</h3>
+
+                    <p>
+                        Consultas SQL para extração,
+                        tratamento e análise de dados
+                        em bancos de dados corporativos.
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+                    <div class="project-icon">⚙️</div>
+
+                    <h3>TOTVS RM</h3>
+
+                    <p>
+                        Soluções, consultas e processos
+                        desenvolvidos para apoiar a gestão
+                        acadêmica e administrativa.
+                    </p>
+
+                </div>
+
+
+                <div class="project">
+
+                    <div class="project-icon">🔗</div>
+
+                    <h3>Integrações</h3>
+
+                    <p>
+                        Integração e comunicação entre
+                        sistemas para automatizar
+                        processos e informações.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="contact" id="contato">
+
+        <div class="container">
+
+            <div class="section-title">
+                <small>Contato</small>
+                <h2>Vamos conversar?</h2>
+            </div>
+
+            <p>
+                Estou sempre aberto a conhecer novos projetos,
+                oportunidades e desafios na área de tecnologia.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="https://github.com/ardesouza"
+                   target="_blank"
+                   class="btn btn-secondary">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 Aleksandro Rodrigues.
+    Todos os direitos reservados.
+
+</footer>
+
+</body>
+</html>
+```
