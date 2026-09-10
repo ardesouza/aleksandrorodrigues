@@ -703,7 +703,169 @@ footer {
         0 25px 70px rgba(0, 0, 0, 0.45);
 }
 
+---
 
+/* =========================================
+   CABEÇALHO DO NAVEGADOR
+========================================= */
+
+.browser-header {
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    background: #1b1b1b;
+    border-bottom: 1px solid #292929;
+}
+
+
+/* BOTÕES */
+
+.browser-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.browser-buttons span {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #555;
+}
+
+
+/* ENDEREÇO */
+
+.browser-address {
+    flex: 1;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 7px 15px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #888;
+
+    background: #111;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   ÁREA DE VISUALIZAÇÃO
+========================================= */
+
+.website-preview {
+    height: 600px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #fff;
+}
+
+
+/* IMAGEM DO WEBSITE */
+
+.website-preview img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* BARRA DE ROLAGEM */
+
+.website-preview::-webkit-scrollbar {
+    width: 10px;
+}
+
+.website-preview::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+.website-preview::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.website-preview::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+
+/* =========================================
+   BOTÃO DA PÁGINA COMPLETA
+========================================= */
+
+.website-actions {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   VOLTAR
+========================================= */
+
+.project-back {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 700px) {
+
+    .project-detail-hero {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    .browser-window {
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+
+    .browser-header {
+        height: 42px;
+        padding: 0 12px;
+    }
+
+    .browser-buttons span {
+        width: 9px;
+        height: 9px;
+    }
+
+    .browser-address {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
+    .website-preview {
+        height: 450px;
+    }
+
+}
+
+---
 /* =========================================
    CABEÇALHO DAS DEMONSTRAÇÕES
 ========================================= */
