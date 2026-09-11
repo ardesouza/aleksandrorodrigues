@@ -850,6 +850,12 @@ footer {
 
 @media (max-width: 700px) {
 
+      /* ocultar qrcode em celular */
+
+    .qrcode {
+        display: none;
+    }
+
     /* Cabeçalho */
 
     header nav {
