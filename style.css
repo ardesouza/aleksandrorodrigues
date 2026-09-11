@@ -575,8 +575,8 @@ footer {
 ========================================= */
 
 .demo-header {
-    max-width: 850px;
-
+    width: 100%;
+    max-width: 1150px;
     margin: 0 auto 35px;
 }
 
