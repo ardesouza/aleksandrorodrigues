@@ -26,6 +26,22 @@ navLinks.forEach(link => {
     });
 });
 
+// ===============================
+// FECHAR MENU AO CLICAR FORA
+// ===============================
+
+document.addEventListener('click', (event) => {
+
+    if (
+        nav &&
+        nav.classList.contains('active') &&
+        !nav.contains(event.target)
+    ) {
+        nav.classList.remove('active');
+    }
+
+});
+
 
 // ===============================
 // ANIMAÇÃO AO ROLAR A PÁGINA
