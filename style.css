@@ -939,3 +939,73 @@ footer {
     }
 
 }
+
+/* =========================================
+   TAGS DOS PROJETOS WEB
+========================================= */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.project-tags span {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border: 1px solid #303030;
+    border-radius: 20px;
+
+    background: #151515;
+
+    color: #aaa;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   DESTAQUE DAS TAGS
+========================================= */
+
+.project-tags span:hover {
+    border-color: #4f8cff;
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   ESPAÇAMENTO ENTRE DEMONSTRAÇÕES
+========================================= */
+
+.website-demo {
+    padding-bottom: 80px;
+}
+
+.website-demo + .website-demo {
+    padding-top: 80px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .project-tags {
+        gap: 7px;
+    }
+
+    .project-tags span {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+}
