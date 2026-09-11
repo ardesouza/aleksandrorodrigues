@@ -96,6 +96,18 @@ nav ul li a:hover {
 
 
 /* =========================================
+   MENU MOBILE
+========================================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+
+/* =========================================
    HERO
 ========================================= */
 
@@ -156,7 +168,6 @@ nav ul li a:hover {
     font-size: clamp(48px, 7vw, 82px);
 
     line-height: 1.05;
-
     letter-spacing: -3px;
 
     margin-bottom: 20px;
@@ -193,8 +204,8 @@ nav ul li a:hover {
 .buttons {
     display: flex;
     align-items: center;
-    gap: 15px;
 
+    gap: 15px;
     flex-wrap: wrap;
 }
 
@@ -280,7 +291,6 @@ section.visible {
     font-weight: 700;
 
     text-transform: uppercase;
-
     letter-spacing: 2px;
 
     margin-bottom: 8px;
@@ -288,7 +298,6 @@ section.visible {
 
 .section-title h2 {
     font-size: 40px;
-
     line-height: 1.2;
 }
 
@@ -527,124 +536,6 @@ footer {
 
 
 /* =========================================
-   RESPONSIVIDADE
-========================================= */
-
-@media (max-width: 950px) {
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 700px) {
-
-    header nav {
-        height: 65px;
-    }
-
-    nav ul {
-        gap: 15px;
-    }
-
-    nav ul li a {
-        font-size: 13px;
-    }
-
-    .hero {
-        min-height: 90vh;
-
-        padding-top: 65px;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-
-        letter-spacing: -2px;
-    }
-
-    .hero h2 {
-        font-size: 22px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-
-    .section-title h2 {
-        font-size: 32px;
-    }
-
-    .skills-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill {
-        min-height: auto;
-    }
-
-    .project {
-        min-height: auto;
-    }
-
-    .buttons {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .btn {
-        text-align: center;
-    }
-}
-
-
-/* =========================================
-   CELULARES PEQUENOS
-========================================= */
-
-@media (max-width: 480px) {
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .hero h2 {
-        font-size: 20px;
-    }
-
-    .hero-small {
-        font-size: 16px;
-    }
-
-    .section-title h2 {
-        font-size: 29px;
-    }
-
-    .info-card {
-        padding: 22px;
-    }
-}
-
-/* =========================================
    PÁGINA DETALHADA DO PROJETO
 ========================================= */
 
@@ -660,18 +551,58 @@ footer {
 
 .project-description {
     max-width: 900px;
+
     margin: 0 auto;
 }
 
 .project-description h2 {
     font-size: 32px;
+
     margin-bottom: 25px;
 }
 
 .project-description p {
     color: #aaa;
+
     line-height: 1.8;
+
     margin-bottom: 18px;
+}
+
+
+/* =========================================
+   CABEÇALHO DAS DEMONSTRAÇÕES
+========================================= */
+
+.demo-header {
+    max-width: 850px;
+
+    margin: 0 auto 35px;
+}
+
+.demo-header small {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #4f8cff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.demo-header h2 {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.demo-header p {
+    color: #aaa;
+
+    line-height: 1.7;
 }
 
 
@@ -680,6 +611,11 @@ footer {
 ========================================= */
 
 .website-demo {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.website-demo + .website-demo {
     padding-top: 80px;
 }
 
@@ -691,19 +627,32 @@ footer {
 .browser-window {
     width: 100%;
     max-width: 1150px;
+
     margin: 50px auto 0;
 
     background: #111;
+
     border: 1px solid #292929;
+
     border-radius: 14px;
 
     overflow: hidden;
 
     box-shadow:
         0 25px 70px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
----
+.browser-window:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
 
 /* =========================================
    CABEÇALHO DO NAVEGADOR
@@ -718,6 +667,7 @@ footer {
     padding: 0 18px;
 
     background: #1b1b1b;
+
     border-bottom: 1px solid #292929;
 }
 
@@ -726,6 +676,7 @@ footer {
 
 .browser-buttons {
     display: flex;
+
     gap: 8px;
 }
 
@@ -772,7 +723,7 @@ footer {
     overflow-y: auto;
     overflow-x: hidden;
 
-    background: #fff;
+    background: #ffffff;
 }
 
 
@@ -798,6 +749,7 @@ footer {
 
 .website-preview::-webkit-scrollbar-thumb {
     background: #555;
+
     border-radius: 10px;
 }
 
@@ -807,146 +759,14 @@ footer {
 
 
 /* =========================================
-   BOTÃO DA PÁGINA COMPLETA
-========================================= */
-
-.website-actions {
-    display: flex;
-    justify-content: center;
-
-    margin-top: 30px;
-}
-
-
-/* =========================================
-   VOLTAR
-========================================= */
-
-.project-back {
-    padding-top: 40px;
-    padding-bottom: 100px;
-}
-
-
-/* =========================================
-   RESPONSIVO
-========================================= */
-
-@media (max-width: 700px) {
-
-    .project-detail-hero {
-        padding-top: 120px;
-        padding-bottom: 50px;
-    }
-
-    .browser-window {
-        margin-top: 30px;
-        border-radius: 10px;
-    }
-
-    .browser-header {
-        height: 42px;
-        padding: 0 12px;
-    }
-
-    .browser-buttons span {
-        width: 9px;
-        height: 9px;
-    }
-
-    .browser-address {
-        font-size: 10px;
-        padding: 6px 8px;
-    }
-
-    .website-preview {
-        height: 450px;
-    }
-
-}
-
----
-/* =========================================
-   CABEÇALHO DAS DEMONSTRAÇÕES
-========================================= */
-
-.demo-header {
-    max-width: 850px;
-    margin: 0 auto 35px;
-}
-
-.demo-header small {
-    display: inline-block;
-
-    margin-bottom: 12px;
-
-    color: #4f8cff;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-.demo-header h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.demo-header p {
-    color: #aaa;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   SEPARAÇÃO ENTRE PROJETOS
-========================================= */
-
-.website-demo + .website-demo {
-    padding-top: 30px;
-}
-
-
-/* =========================================
-   DESTAQUE AO PASSAR O MOUSE
-========================================= */
-
-.browser-window {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.browser-window:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.55);
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-    .demo-header h2 {
-        font-size: 26px;
-    }
-
-    .demo-header p {
-        font-size: 14px;
-    }
-
-}
-
-/* =========================================
    TAGS DOS PROJETOS WEB
 ========================================= */
 
 .project-tags {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 10px;
 
     margin-top: 22px;
@@ -958,6 +778,7 @@ footer {
     padding: 7px 13px;
 
     border: 1px solid #303030;
+
     border-radius: 20px;
 
     background: #151515;
@@ -966,38 +787,186 @@ footer {
 
     font-size: 12px;
     font-weight: 500;
+
+    transition: 0.3s ease;
 }
-
-
-/* =========================================
-   DESTAQUE DAS TAGS
-========================================= */
 
 .project-tags span:hover {
     border-color: #4f8cff;
-    color: #fff;
-    transition: 0.3s;
+
+    color: #ffffff;
 }
 
 
 /* =========================================
-   ESPAÇAMENTO ENTRE DEMONSTRAÇÕES
+   BOTÃO DA PÁGINA COMPLETA
 ========================================= */
 
-.website-demo {
-    padding-bottom: 80px;
-}
+.website-actions {
+    display: flex;
 
-.website-demo + .website-demo {
-    padding-top: 80px;
+    justify-content: center;
+
+    margin-top: 30px;
 }
 
 
 /* =========================================
-   MOBILE
+   BOTÃO VOLTAR
+========================================= */
+
+.project-back {
+    padding-top: 40px;
+
+    padding-bottom: 100px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
 ========================================= */
 
 @media (max-width: 700px) {
+
+    /* Cabeçalho */
+
+    header nav {
+        height: 65px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 90vh;
+
+        padding-top: 65px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* Seções */
+
+    section {
+        padding: 75px 0;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+
+    /* Grids */
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill,
+    .project {
+        min-height: auto;
+    }
+
+
+    /* Botões */
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+
+    /* Página de projetos */
+
+    .project-detail-hero {
+        padding-top: 120px;
+
+        padding-bottom: 50px;
+    }
+
+    .browser-window {
+        margin-top: 30px;
+
+        border-radius: 10px;
+    }
+
+    .browser-header {
+        height: 42px;
+
+        padding: 0 12px;
+    }
+
+    .browser-buttons span {
+        width: 9px;
+        height: 9px;
+    }
+
+    .browser-address {
+        font-size: 10px;
+
+        padding: 6px 8px;
+    }
+
+    .website-preview {
+        height: 450px;
+    }
+
+    .demo-header h2 {
+        font-size: 26px;
+    }
+
+    .demo-header p {
+        font-size: 14px;
+    }
 
     .project-tags {
         gap: 7px;
@@ -1005,7 +974,35 @@ footer {
 
     .project-tags span {
         font-size: 11px;
+
         padding: 6px 10px;
     }
+}
 
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-small {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .info-card {
+        padding: 22px;
+    }
 }
