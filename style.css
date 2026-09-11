@@ -1135,3 +1135,113 @@ footer {
     }
 
 }
+
+/* =========================================
+   COMPETÊNCIAS
+========================================= */
+
+.competencies {
+    padding: 110px 0;
+}
+
+.competencies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 55px;
+}
+
+.competency {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+
+    padding: 28px 30px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.competency:hover {
+    transform: translateY(-4px);
+
+    background: rgba(79, 140, 255, 0.045);
+
+    border-color: rgba(79, 140, 255, 0.28);
+}
+
+.competency-number {
+    flex-shrink: 0;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #4f8cff;
+
+    letter-spacing: 1px;
+
+    padding-top: 4px;
+}
+
+.competency h3 {
+    margin: 0 0 9px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+.competency p {
+    margin: 0;
+
+    max-width: 430px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.58);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .competencies {
+        padding: 80px 0;
+    }
+
+    .competencies-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 40px;
+    }
+
+    .competency {
+        padding: 23px 22px;
+        gap: 17px;
+    }
+
+    .competency h3 {
+        font-size: 16px;
+    }
+
+    .competency p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+}
