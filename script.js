@@ -60,3 +60,24 @@ const year = document.querySelector('#year');
 if (year) {
     year.textContent = new Date().getFullYear();
 }
+
+// ===============================
+// MENU MOBILE SANDUICHE
+// ===============================
+
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+
+    menuToggle.textContent =
+        menu.classList.contains('active') ? '✕' : '☰';
+});
+
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        menuToggle.textContent = '☰';
+    });
+});
