@@ -1031,7 +1031,7 @@ footer {
         z-index: 1001;
     }
 
-    nav ul {
+    header nav ul {
         position: absolute;
         top: 75px;
         right: 0;
@@ -1050,21 +1050,21 @@ footer {
         padding: 10px 0;
     }
 
-    nav ul.active {
+    header nav.active ul {
         display: flex;
     }
 
-    nav ul li {
+    header nav ul li {
         width: 100%;
     }
 
-    nav ul li a {
+    header nav ul li a {
         display: block;
         width: 100%;
         padding: 12px 20px;
     }
 
-    nav ul li a:hover {
+    header nav ul li a:hover {
         background: rgba(79, 140, 255, 0.08);
     }
 }
