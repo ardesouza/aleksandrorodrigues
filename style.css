@@ -508,16 +508,10 @@ section.visible {
 }*/
 
 .contact > .container > p {
-    color: #4b5563;
+    color: #0d121c;
     font-size: 17px;
     max-width: 650px;
     margin: 0 auto 30px;
-}
-.contact .section-title {
-    color: #111827;
-    margin-bottom: 20px;
-}
-
 
 .contact-links {
     display: flex;
