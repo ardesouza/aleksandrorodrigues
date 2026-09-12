@@ -512,6 +512,7 @@ section.visible {
     font-size: 17px;
     max-width: 650px;
     margin: 0 auto 30px;
+}
 
 .contact-links {
     display: flex;
