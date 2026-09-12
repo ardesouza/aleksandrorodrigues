@@ -497,7 +497,7 @@ section.visible {
     margin-bottom: 20px;
 }
 
-.contact > .container > p {
+/*.contact > .container > p {
     color: #9299a8;
 
     font-size: 17px;
@@ -505,7 +505,19 @@ section.visible {
     max-width: 650px;
 
     margin: 0 auto 30px;
+}*/
+
+.contact > .container > p {
+    color: #4b5563;
+    font-size: 17px;
+    max-width: 650px;
+    margin: 0 auto 30px;
 }
+.contact .section-title {
+    color: #111827;
+    margin-bottom: 20px;
+}
+
 
 .contact-links {
     display: flex;
