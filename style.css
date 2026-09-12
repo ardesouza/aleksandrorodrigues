@@ -487,6 +487,7 @@ section.visible {
 
 .contact {
     text-align: center;
+   background: #0d121c;
 }
 
 .contact .container {
@@ -505,7 +506,7 @@ section.visible {
     max-width: 650px;
 
     margin: 0 auto 30px;
-   background: #0d121c;
+   
 }
 
 
