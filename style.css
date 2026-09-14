@@ -1248,3 +1248,126 @@ footer {
     }
 
 }
+
+/* =========================================
+   PROJETOS SQL
+========================================= */
+
+.sql-code,
+.sql-result,
+.sql-observation {
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto 0;
+    background: #0d1117;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* CABEÇALHO DOS BLOCOS */
+
+.sql-code-header,
+.sql-result-header {
+    padding: 14px 20px;
+    background: #111827;
+    border-bottom: 1px solid #1f2937;
+    color: #9299a8;
+    font-size: 14px;
+}
+
+
+/* CÓDIGO SQL */
+
+.sql-code pre {
+    margin: 0;
+    padding: 25px;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #d1d5db;
+}
+
+.sql-code code {
+    font-family: inherit;
+}
+
+
+/* RESULTADO */
+
+.sql-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sql-result table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sql-result th,
+.sql-result td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #1f2937;
+    white-space: nowrap;
+}
+
+.sql-result th {
+    color: #9299a8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sql-result td {
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+.sql-result tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* OBSERVAÇÃO */
+
+.sql-observation {
+    padding: 25px;
+}
+
+.sql-observation strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.sql-observation p {
+    margin: 0;
+    color: #9299a8;
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    .sql-code pre {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .sql-result th,
+    .sql-result td {
+        padding: 12px 14px;
+        font-size: 12px;
+    }
+
+    .sql-observation {
+        padding: 20px;
+    }
+
+}
