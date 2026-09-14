@@ -1430,3 +1430,176 @@ footer {
     }
 
 }
+
+/* =========================================
+   MAPA DE INTEGRAÇÕES
+========================================= */
+
+.integration-map {
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px;
+    margin: 50px auto 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   SISTEMAS
+========================================= */
+
+.integration-system,
+.integration-central {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #0d1117;
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+    padding: 22px 25px;
+    z-index: 2;
+}
+
+.integration-system {
+    width: 200px;
+    min-height: 90px;
+}
+
+.integration-central {
+    width: 230px;
+    min-height: 120px;
+    border-color: #374151;
+}
+
+.integration-system strong,
+.integration-central strong {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.integration-system span,
+.integration-central span {
+    color: #9299a8;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   POSIÇÕES
+========================================= */
+
+.integration-top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.integration-left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.integration-central {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.integration-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.integration-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* =========================================
+   LINHAS
+========================================= */
+
+.integration-line {
+    position: absolute;
+    background: #374151;
+    z-index: 1;
+}
+
+.line-top {
+    width: 1px;
+    height: 130px;
+    top: 90px;
+    left: 50%;
+}
+
+.line-left {
+    height: 1px;
+    width: 240px;
+    left: 190px;
+    top: 50%;
+}
+
+.line-right {
+    height: 1px;
+    width: 240px;
+    right: 190px;
+    top: 50%;
+}
+
+.line-bottom {
+    width: 1px;
+    height: 130px;
+    bottom: 90px;
+    left: 50%;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .integration-map {
+        min-height: 650px;
+    }
+
+    .integration-system {
+        width: 170px;
+        padding: 18px;
+    }
+
+    .integration-central {
+        width: 190px;
+    }
+
+    .integration-left {
+        left: 0;
+    }
+
+    .integration-right {
+        right: 0;
+    }
+
+    .line-left {
+        width: 70px;
+        left: calc(50% - 165px);
+    }
+
+    .line-right {
+        width: 70px;
+        right: calc(50% - 165px);
+    }
+
+}
