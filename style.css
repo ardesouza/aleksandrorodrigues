@@ -1371,3 +1371,62 @@ footer {
     }
 
 }
+
+/* =========================================
+   FLUXO DE INTEGRAÇÕES
+========================================= */
+
+.integration-flow {
+    width: 100%;
+    max-width: 1150px;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.integration-item {
+    min-width: 180px;
+    padding: 25px 20px;
+    text-align: center;
+    background: #0d1117;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+}
+
+.integration-item strong {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.integration-item span {
+    color: #9299a8;
+    font-size: 13px;
+}
+
+.integration-arrow {
+    color: #9299a8;
+    font-size: 24px;
+}
+
+@media (max-width: 700px) {
+
+    .integration-flow {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .integration-arrow {
+        transform: rotate(90deg);
+    }
+
+    .integration-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
