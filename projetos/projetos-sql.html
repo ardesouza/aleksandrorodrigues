@@ -246,6 +246,364 @@ ORDER BY A.NOME;</code></pre>
 
 </section>
 
+<!-- =========================================
+     PROJETO 02
+========================================== -->
+
+<section class="website-demo">
+
+    <div class="container">
+
+        <div class="demo-header">
+
+            <small>PROJETO 02 · REGRAS DE NEGÓCIO</small>
+
+            <h2>Identificação de situações por regras de negócio</h2>
+
+            <p>
+                Consulta desenvolvida para identificar registros
+                que atendem a diferentes condições de negócio,
+                utilizando filtros, operadores condicionais e
+                classificação dos resultados.
+            </p>
+
+            <p>
+                O exemplo demonstra como regras definidas para um
+                determinado processo podem ser representadas
+                diretamente na consulta SQL, facilitando a
+                identificação e análise de situações específicas.
+            </p>
+
+            <div class="project-tags">
+                <span>SQL Server</span>
+                <span>CASE</span>
+                <span>WHERE</span>
+                <span>Regras de negócio</span>
+            </div>
+
+        </div>
+
+
+        <!-- CÓDIGO SQL -->
+
+        <div class="sql-code">
+
+            <div class="sql-code-header">
+                <span>Consulta SQL</span>
+            </div>
+
+            <pre><code>SELECT
+    A.RA,
+    A.NOME AS ALUNO,
+    CASE
+        WHEN F.VENCIDOS > 0
+            THEN 'PENDÊNCIA FINANCEIRA'
+        WHEN M.STATUS = 'ATIVO'
+            THEN 'REGULAR'
+        ELSE 'VERIFICAR'
+    END AS SITUACAO
+FROM ALUNOS A
+INNER JOIN MATRICULAS M
+    ON M.RA = A.RA
+LEFT JOIN FINANCEIRO F
+    ON F.RA = A.RA
+WHERE M.STATUS IN ('ATIVO', 'PENDENTE')
+ORDER BY A.NOME;</code></pre>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div class="sql-result">
+
+            <div class="sql-result-header">
+                <span>Resultado da consulta</span>
+            </div>
+
+            <div class="sql-table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>RA</th>
+                            <th>ALUNO</th>
+                            <th>VENCIDOS</th>
+                            <th>SITUAÇÃO</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>100001</td>
+                            <td>João Silva</td>
+                            <td>0</td>
+                            <td>REGULAR</td>
+                        </tr>
+
+                        <tr>
+                            <td>100002</td>
+                            <td>Maria Souza</td>
+                            <td>2</td>
+                            <td>PENDÊNCIA FINANCEIRA</td>
+                        </tr>
+
+                        <tr>
+                            <td>100003</td>
+                            <td>Ana Oliveira</td>
+                            <td>0</td>
+                            <td>REGULAR</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="sql-observation">
+
+            <strong>O que este exemplo demonstra?</strong>
+
+            <p>
+                A utilização de estruturas condicionais permite
+                transformar diferentes informações do banco de dados
+                em uma classificação objetiva, seguindo regras
+                previamente definidas para o processo.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PROJETO 03
+========================================== -->
+
+<section class="website-demo">
+
+    <div class="container">
+
+        <div class="demo-header">
+
+            <small>PROJETO 03 · TRATAMENTO E CONSOLIDAÇÃO</small>
+
+            <h2>Consolidação de informações para análise</h2>
+
+            <p>
+                Consulta desenvolvida para consolidar informações
+                distribuídas em diferentes registros e apresentar
+                os dados de forma organizada para análise.
+            </p>
+
+            <p>
+                O exemplo utiliza uma CTE para organizar os dados
+                antes da consulta final, permitindo aplicar
+                agrupamentos e funções de agregação para obter
+                indicadores consolidados.
+            </p>
+
+            <div class="project-tags">
+                <span>SQL Server</span>
+                <span>CTE</span>
+                <span>GROUP BY</span>
+                <span>Agregação</span>
+            </div>
+
+        </div>
+
+
+        <!-- CÓDIGO SQL -->
+
+        <div class="sql-code">
+
+            <div class="sql-code-header">
+                <span>Consulta SQL</span>
+            </div>
+
+            <pre><code>WITH RESUMO AS (
+
+    SELECT
+        C.NOME AS CURSO,
+        COUNT(A.RA) AS TOTAL_ALUNOS
+    FROM ALUNOS A
+
+    INNER JOIN MATRICULAS M
+        ON M.RA = A.RA
+
+    INNER JOIN CURSOS C
+        ON C.CODCURSO = M.CODCURSO
+
+    WHERE M.STATUS = 'ATIVO'
+
+    GROUP BY C.NOME
+
+)
+
+SELECT
+    CURSO,
+    TOTAL_ALUNOS
+FROM RESUMO
+ORDER BY TOTAL_ALUNOS DESC;</code></pre>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div class="sql-result">
+
+            <div class="sql-result-header">
+                <span>Resultado da consulta</span>
+            </div>
+
+            <div class="sql-table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>CURSO</th>
+                            <th>TOTAL DE ALUNOS</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Administração</td>
+                            <td>428</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pedagogia</td>
+                            <td>356</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sistemas de Informação</td>
+                            <td>284</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ciências Contábeis</td>
+                            <td>217</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="sql-observation">
+
+            <strong>O que este exemplo demonstra?</strong>
+
+            <p>
+                A consolidação de dados permite transformar grandes
+                volumes de registros em informações resumidas,
+                facilitando a geração de relatórios e a análise
+                de indicadores.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     TECNOLOGIAS
+========================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>TECNOLOGIAS</small>
+
+            <h2>Recursos utilizados</h2>
+
+            <p>
+                Recursos utilizados na construção das consultas
+                e no tratamento das informações apresentadas.
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill">
+
+                <h3>SQL Server</h3>
+
+                <p>
+                    Consultas, filtros, relacionamentos e
+                    manipulação de dados em banco de dados.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>JOIN</h3>
+
+                <p>
+                    Relacionamento entre diferentes conjuntos
+                    de dados para obtenção de informações.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>CTE</h3>
+
+                <p>
+                    Organização e estruturação de consultas
+                    complexas para facilitar o tratamento dos dados.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>CASE</h3>
+
+                <p>
+                    Aplicação de condições e regras de negócio
+                    diretamente nas consultas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
      <!-- =========================================
          VOLTAR
     ========================================== -->
