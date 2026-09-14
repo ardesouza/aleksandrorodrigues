@@ -148,7 +148,148 @@
          PROJETOS SQL
     ========================================== -->
 
-    <!-- Os primeiros cases serão adicionados aqui -->
+    <!-- =========================================
+     PROJETO 01
+========================================== -->
+
+<section class="website-demo">
+
+    <div class="container">
+
+        <div class="demo-header">
+
+            <small>PROJETO 01 · CONSULTAS COMPLEXAS</small>
+
+            <h2>Cruzamento de dados acadêmicos e financeiros</h2>
+
+            <p>
+                Consulta desenvolvida para relacionar informações
+                acadêmicas e financeiras, permitindo analisar
+                diferentes situações a partir do relacionamento
+                entre múltiplas tabelas.
+            </p>
+
+            <p>
+                O exemplo demonstra a utilização de relacionamentos
+                entre dados, filtros e regras de negócio para
+                transformar informações distribuídas no banco
+                de dados em um resultado consolidado.
+            </p>
+
+            <div class="project-tags">
+                <span>SQL Server</span>
+                <span>JOIN</span>
+                <span>Filtros</span>
+                <span>Regras de negócio</span>
+            </div>
+
+        </div>
+
+
+        <!-- CÓDIGO SQL -->
+
+        <div class="sql-code">
+
+            <div class="sql-code-header">
+                <span>Consulta SQL</span>
+            </div>
+
+            <pre><code>SELECT
+    A.RA,
+    A.NOME AS ALUNO,
+    C.NOME AS CURSO,
+    P.CODPERLET AS PERIODO_LETIVO,
+    F.STATUS AS SITUACAO_FINANCEIRA
+FROM ALUNOS A
+INNER JOIN MATRICULAS M
+    ON M.RA = A.RA
+INNER JOIN CURSOS C
+    ON C.CODCURSO = M.CODCURSO
+INNER JOIN PERIODOS P
+    ON P.ID = M.IDPERIODO
+LEFT JOIN FINANCEIRO F
+    ON F.RA = A.RA
+WHERE M.STATUS = 'ATIVO'
+ORDER BY A.NOME;</code></pre>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div class="sql-result">
+
+            <div class="sql-result-header">
+                <span>Resultado da consulta</span>
+            </div>
+
+            <div class="sql-table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>RA</th>
+                            <th>ALUNO</th>
+                            <th>CURSO</th>
+                            <th>PERÍODO</th>
+                            <th>SITUAÇÃO FINANCEIRA</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>100001</td>
+                            <td>João Silva</td>
+                            <td>Administração</td>
+                            <td>2026/3</td>
+                            <td>Regular</td>
+                        </tr>
+
+                        <tr>
+                            <td>100002</td>
+                            <td>Maria Souza</td>
+                            <td>Pedagogia</td>
+                            <td>2026/3</td>
+                            <td>Pendente</td>
+                        </tr>
+
+                        <tr>
+                            <td>100003</td>
+                            <td>Ana Oliveira</td>
+                            <td>Sistemas de Informação</td>
+                            <td>2026/3</td>
+                            <td>Regular</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div class="sql-observation">
+
+            <strong>O que este exemplo demonstra?</strong>
+
+            <p>
+                O relacionamento entre diferentes conjuntos de dados
+                permite consolidar informações acadêmicas e financeiras
+                em uma única consulta, facilitando a análise e a
+                identificação de situações específicas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
     <!-- =========================================
