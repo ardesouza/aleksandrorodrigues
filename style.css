@@ -1570,34 +1570,19 @@ footer {
 ========================================= */
 
 @media (max-width: 700px) {
+
     .integration-map {
-        min-height: 650px;
+        width: 900px;
+        max-width: none;
+        min-height: 500px;
+
+        margin: 30px auto 0;
+
+        left: 50%;
+        transform: translateX(-50%) scale(0.42);
+        transform-origin: top center;
+
+        position: relative;
     }
 
-    .integration-system {
-        width: 170px;
-        padding: 18px;
-    }
-
-    .integration-central {
-        width: 190px;
-    }
-
-    .integration-left {
-        left: 0;
-    }
-
-    .integration-right {
-        right: 0;
-    }
-
-    .line-left {
-        width: 70px;
-        left: calc(50% - 165px);
-    }
-
-    .line-right {
-        width: 70px;
-        right: calc(50% - 165px);
-    }
 }
