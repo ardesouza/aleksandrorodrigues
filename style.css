@@ -1572,59 +1572,62 @@ footer {
 @media (max-width: 700px) {
 
     .integration-map {
+        position: relative;
         width: 100%;
-        min-height: auto;
+        height: auto;
+        min-height: 0;
         margin: 40px auto 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 18px;
-        position: relative;
+        gap: 20px;
     }
 
-    .integration-system,
-    .integration-central {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        transform: none;
+    .integration-map .integration-system,
+    .integration-map .integration-central {
+        position: relative !important;
 
-        width: 85%;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        transform: none !important;
+
+        width: 85% !important;
         max-width: 280px;
-        min-height: auto;
+        min-height: auto !important;
 
-        padding: 18px 20px;
+        margin: 0 !important;
         box-sizing: border-box;
     }
 
-    /* Ordem dos elementos no celular */
+    /* Ordem dos cards */
 
-    .integration-top {
+    .integration-map .integration-top {
         order: 1;
     }
 
-    .integration-central {
+    .integration-map .integration-central {
         order: 2;
     }
 
-    .integration-left {
+    .integration-map .integration-left {
         order: 3;
     }
 
-    .integration-right {
+    .integration-map .integration-right {
         order: 4;
     }
 
-    .integration-bottom {
+    .integration-map .integration-bottom {
         order: 5;
     }
 
-    /* Esconde as linhas do diagrama no celular */
+    /* Remove as linhas no celular */
 
-    .integration-line {
-        display: none;
+    .integration-map .integration-line {
+        display: none !important;
     }
 
 }
