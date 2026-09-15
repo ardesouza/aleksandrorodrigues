@@ -1572,17 +1572,59 @@ footer {
 @media (max-width: 700px) {
 
     .integration-map {
-        width: 900px;
-        max-width: none;
-        min-height: 500px;
-
-        margin: 30px auto 0;
-
-        left: 50%;
-        transform: translateX(-50%) scale(0.42);
-        transform-origin: top center;
-
+        width: 100%;
+        min-height: auto;
+        margin: 40px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
         position: relative;
+    }
+
+    .integration-system,
+    .integration-central {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+
+        width: 85%;
+        max-width: 280px;
+        min-height: auto;
+
+        padding: 18px 20px;
+        box-sizing: border-box;
+    }
+
+    /* Ordem dos elementos no celular */
+
+    .integration-top {
+        order: 1;
+    }
+
+    .integration-central {
+        order: 2;
+    }
+
+    .integration-left {
+        order: 3;
+    }
+
+    .integration-right {
+        order: 4;
+    }
+
+    .integration-bottom {
+        order: 5;
+    }
+
+    /* Esconde as linhas do diagrama no celular */
+
+    .integration-line {
+        display: none;
     }
 
 }
