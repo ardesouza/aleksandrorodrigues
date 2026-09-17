@@ -77,3 +77,27 @@ if (year) {
     year.textContent = new Date().getFullYear();
 }
 
+// ===============================
+// BOTÃO VOLTAR AO TOPO
+// ===============================
+
+const backToTop = document.querySelector('#backToTop');
+
+if (backToTop) {
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backToTop.style.display = 'flex';
+        } else {
+            backToTop.style.display = 'none';
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+}
