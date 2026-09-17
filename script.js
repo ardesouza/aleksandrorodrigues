@@ -87,10 +87,10 @@ if (backToTop) {
 
     window.addEventListener('scroll', function () {
 
-        if (window.scrollY > 1200) {
-            backToTop.style.display = 'flex';
+        if (window.scrollY > 800) {
+            backToTop.classList.add('show');
         } else {
-            backToTop.style.display = 'none';
+            backToTop.classList.remove('show');
         }
 
     }, { passive: true });
