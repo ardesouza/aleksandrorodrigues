@@ -1707,56 +1707,55 @@ footer {
 
 #backToTop {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 28px;
+    bottom: 28px;
 
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
 
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 50%;
+    border-radius: 10px;
 
-    background: rgba(13, 17, 23, 0.90);
+    background: rgba(13, 17, 23, 0.95);
     backdrop-filter: blur(10px);
 
     color: #ffffff;
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 21px;
+    font-weight: 400;
 
     display: none;
     align-items: center;
     justify-content: center;
 
+    padding: 0;
+    margin: 0;
+
     cursor: pointer;
     z-index: 9999;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #backToTop:hover {
-    transform: translateY(-5px);
-
+    transform: translateY(-4px);
     border-color: #3b82f6;
-    background: rgba(17, 24, 39, 0.95);
-
     color: #3b82f6;
-
-    box-shadow: 0 12px 35px rgba(59, 130, 246, 0.18);
+    background: #111827;
 }
+
+/* CELULAR */
 
 @media (max-width: 700px) {
 
     #backToTop {
-        width: 46px;
-        height: 46px;
+        display: none;
         right: 18px;
         bottom: 18px;
+        width: 46px;
+        height: 46px;
+        border-radius: 9px;
         font-size: 20px;
     }
 
