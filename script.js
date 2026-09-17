@@ -81,23 +81,27 @@ if (year) {
 // BOTÃO VOLTAR AO TOPO
 // ===============================
 
-const backToTop = document.querySelector('#backToTop');
+const backToTop = document.getElementById('backToTop');
 
 if (backToTop) {
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
+    window.addEventListener('scroll', function () {
+
+        if (window.scrollY > 700) {
             backToTop.style.display = 'flex';
         } else {
             backToTop.style.display = 'none';
         }
-    });
 
-    backToTop.addEventListener('click', () => {
+    }, { passive: true });
+
+    backToTop.addEventListener('click', function () {
+
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
+
     });
 
 }
