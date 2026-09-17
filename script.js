@@ -87,7 +87,7 @@ if (backToTop) {
 
     window.addEventListener('scroll', function () {
 
-        if (window.scrollY > 700) {
+        if (window.scrollY > 1200) {
             backToTop.style.display = 'flex';
         } else {
             backToTop.style.display = 'none';
