@@ -87,7 +87,7 @@ if (backToTop) {
 
     window.addEventListener('scroll', function () {
 
-        if (window.scrollY > 1200) {
+        if (window.scrollY > 2000) {
             backToTop.classList.add('show');
         } else {
             backToTop.classList.remove('show');
