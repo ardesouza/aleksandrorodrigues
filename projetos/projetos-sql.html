@@ -165,7 +165,7 @@ INNER JOIN PERIODOS P
 LEFT JOIN FINANCEIRO F
     ON F.RA = A.RA
 WHERE M.STATUS = 'ATIVO'
-ORDER BY A.NOME;</code></pre>
+ORDER BY RA;</code></pre>
 
         </div>
 
@@ -188,8 +188,8 @@ ORDER BY A.NOME;</code></pre>
                             <th>RA</th>
                             <th>ALUNO</th>
                             <th>CURSO</th>
-                            <th>PERÍODO</th>
-                            <th>SITUAÇÃO FINANCEIRA</th>
+                            <th>PERÍODO_LETIVO</th>
+                            <th>SITUAÇÃO_FINANCEIRA</th>
                         </tr>
 
                     </thead>
@@ -308,7 +308,7 @@ INNER JOIN MATRICULAS M
 LEFT JOIN FINANCEIRO F
     ON F.RA = A.RA
 WHERE M.STATUS IN ('ATIVO', 'PENDENTE')
-ORDER BY A.NOME;</code></pre>
+ORDER BY RA;</code></pre>
 
         </div>
 
@@ -474,7 +474,7 @@ ORDER BY TOTAL_ALUNOS DESC;</code></pre>
 
                         <tr>
                             <th>CURSO</th>
-                            <th>TOTAL DE ALUNOS</th>
+                            <th>TOTAL_ALUNOS</th>
                         </tr>
 
                     </thead>
