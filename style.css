@@ -1807,9 +1807,5 @@ footer {
 }
 
 .project-card:hover .project-link span {
-    transform: translateX(6px);
-}
-
-.project-card:hover .project-link span {
     transform: translateX(7px) scale(1.15);
 }
