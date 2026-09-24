@@ -1773,3 +1773,35 @@ footer {
     }
 
 }
+
+<--====================================
+   /* INDICADOR DE CARD CLICÁVEL */
+====================================-->
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #8b95a7;
+
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.project-link span {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-link {
+    color: #3b82f6;
+    gap: 11px;
+}
+
+.project-card:hover .project-link span {
+    transform: translateX(3px);
+}
