@@ -1774,9 +1774,9 @@ footer {
 
 }
 
-<--====================================
-   /* INDICADOR DE CARD CLICÁVEL */
-====================================-->
+/*====================================
+    INDICADOR DE CARD CLICÁVEL 
+====================================*/
 .project-link {
     display: inline-flex;
     align-items: center;
