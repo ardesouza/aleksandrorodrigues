@@ -295,6 +295,7 @@ ORDER BY RA;</code></pre>
             <pre><code>SELECT
     A.RA,
     A.NOME AS ALUNO,
+    F.VENCIDOS,
     CASE
         WHEN F.VENCIDOS > 0
             THEN 'PENDÊNCIA FINANCEIRA'
@@ -331,7 +332,7 @@ ORDER BY RA;</code></pre>
                             <th>RA</th>
                             <th>ALUNO</th>
                             <th>VENCIDOS</th>
-                            <th>SITUAÇÃO</th>
+                            <th>SITUACAO</th>
                         </tr>
 
                     </thead>
