@@ -1784,24 +1784,28 @@ footer {
 
     margin-top: 20px;
 
+    color: #8b95a7;
     font-size: 14px;
     font-weight: 500;
 
-    color: #8b95a7;
-
-    transition: color 0.3s ease, gap 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .project-link span {
+    display: inline-block;
     font-size: 18px;
+
     transition: transform 0.3s ease;
 }
 
+/* =====================================
+   EFEITO AO PASSAR O MOUSE NO CARD
+======================================= */
+
 .project-card:hover .project-link {
     color: #3b82f6;
-    gap: 11px;
 }
 
 .project-card:hover .project-link span {
-    transform: translateX(3px);
+    transform: translateX(6px);
 }
