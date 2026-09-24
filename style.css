@@ -1802,10 +1802,10 @@ footer {
    EFEITO AO PASSAR O MOUSE NO CARD
 ======================================= */
 
-.projects-grid:hover .project-link {
+.project:hover .project-link {
     color: #3b82f6;
 }
 
-.projects-grid:hover .project-link span {
+.project:hover .project-link span {
     transform: translateX(7px) scale(1.15);
 }
